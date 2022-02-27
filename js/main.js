@@ -46,7 +46,7 @@ const displayPlayers = (players) => {
                 }</h5>
                 <p></p>
                 <div class="all-button">
-                    <button class="btn btn-danger">Delete</button>
+                    <button class="btn btn-danger delete-btn">Delete</button>
                     <button onclick="details('${
                         player.idPlayer
                     }')" class="btn btn-success">Details</button>
@@ -54,6 +54,14 @@ const displayPlayers = (players) => {
             </div>
         `;
             parent.appendChild(div);
+
+            const deletePlayers = document.getElementsByClassName("delete-btn");
+            for (const deletePlayer of deletePlayers) {
+                deletePlayer.addEventListener("click", (event) => {
+                    event.target.parentNode.parentNode.style.display = "none";
+                });
+            }
+
             // console.log(player);
         });
         toggeleSpinner("none");
