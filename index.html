@@ -21,23 +21,38 @@
         <div class="container w-100 m-auto">
             <div class="row w-100 m-auto">
                 <div class="col-md-6">
-                    <h1 class="text-center">Left Side</h1>
+                    <h1 class="text-center">Players</h1>
 
                     <div class="input-group m-3 w-75 mx-auto">
-                        <input id="search-box"
+                        <input
+                            id="search-box"
                             type="text"
                             class="form-control"
                             aria-label="Recipient's username"
                             placeholder="Search"
                             aria-describedby="basic-addon2"
                         />
-                        <button onclick="allPlayers()" class="input-group-text" id="search-btn"
-                            >Search</button
+                        <button
+                            onclick="allPlayers()"
+                            class="input-group-text"
+                            id="search-btn"
                         >
+                            Search
+                        </button>
                     </div>
+                    <h3 id="error-message" class="message text-danger text-center"></h3>
+                    <img id="spinner" class="img-fluid" src="./images/spinnervlll.gif" alt="">
+                    <div id="player-container" class="player-container"></div>
                 </div>
                 <div class="col-md-6">
-                    <h1 class="text-center">Right Side</h1>
+                    <h1 class="text-center">Player Details</h1>
+                    <div class="image-container w-50 mx-auto m-3">
+                        <img id="female" class="w-100" src="./images/female.png" alt="" />
+                        <img id="male" class="w-100" src="./images/male.png" alt="" />
+                    </div>
+                    <div id="details-container" class="details-container">
+                        
+                    </div>
                 </div>
             </div>
         </div>
